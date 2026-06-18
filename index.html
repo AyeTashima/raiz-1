@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raíz — Restauración de Muebles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><img src="logo_raiz.png" alt="Raíz" /></a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#cursos">Cursos</a></li>
+    <li><a href="#capsula">Capsula</a></li>
+    <li><a href="#contactanos">Contactanos</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#nosotros" class="mobile-link">Nosotros</a>
+  <a href="#cursos" class="mobile-link">Cursos</a>
+  <a href="#capsula" class="mobile-link">Capsula</a>
+  <a href="#contactanos" class="mobile-link">Contactanos</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-swirl"></div>
+
+  <div class="hero-content fade-in">
+    <span class="hero-pill">Curso de restauración de muebles desde 0</span>
+    <h1>Transformamos muebles. Inspiramos personas.</h1>
+    <p class="hero-desc">Desde cero o para llevar tus habilidades al próximo nivel. Aprendé a restaurar, reparar y dar nueva vida a los muebles de madera.</p>
+    <a href="#cursos" class="btn">Inscribirme</a>
+    <div class="hero-dots" id="heroDots">
+      <div class="dot active" data-i="0"></div>
+      <div class="dot" data-i="1"></div>
+      <div class="dot" data-i="2"></div>
+    </div>
+  </div>
+
+  <div class="hero-image fade-in">
+    <div class="hero-img-box">
+      <img src="hero_mueble.png" alt="Mueble restaurado" />
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="fade-in">
+    <h2>Nosotros</h2>
+    <p>En Raíz creemos en el poder de transformar. Somos una comunidad creativa que enseña restauración de muebles, reciclaje y diseño a través de cursos online pensados para quienes disfrutan crear con sus manos.</p>
+    <p>Nuestros docentes combinan técnica, mirada estética y sostenibilidad para ayudarte a dar nueva vida a tus muebles y convertir cada proyecto en algo único.</p>
+    <a href="#cursos" class="link-arrow">Ver más →</a>
+  </div>
+  <div class="nosotros-img fade-in">
+    <img src="nosotros.png" alt="Nosotros" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:var(--radius);" />
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos">
+  <h2 class="fade-in">Cursos</h2>
+  <div class="cursos-grid">
+
+    <div class="curso-card fade-in">
+      <div class="curso-card-img"><img src="curso1.png" alt="Curso restauración desde 0" /></div>
+      <div class="curso-card-body">
+        <h3>Curso de restauración de muebles de madera desde 0</h3>
+        <p>Aprendé las bases de la restauración: preparación, pintura y terminación paso a paso.</p>
+        <a href="#contactanos" class="btn-sm">Inscribirse →</a>
+      </div>
+    </div>
+
+    <div class="curso-card fade-in">
+      <div class="curso-card-img"><img src="curso2.png" alt="Técnicas avanzadas" /></div>
+      <div class="curso-card-body">
+        <h3>Técnicas Avanzadas de Restauración</h3>
+        <p>Dominá técnicas profesionales para dar nueva vida a muebles dañados y lograr resultados de calidad.</p>
+        <a href="#contactanos" class="btn-sm">Inscribirse →</a>
+      </div>
+    </div>
+
+    <div class="curso-card fade-in">
+      <div class="curso-card-img"><img src="curso3.png" alt="Curso restauración madera" /></div>
+      <div class="curso-card-body">
+        <h3>Curso de restauración de muebles de madera</h3>
+        <p>Para quienes ya conocen las bases y quieren avanzar hacia proyectos más desafiantes con autonomía.</p>
+        <a href="#contactanos" class="btn-sm">Inscribirse →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAPSULA -->
+<section id="capsula">
+  <h2 class="fade-in"></h2>
+  <div class="capsula-carousel-wrap fade-in">
+    <div class="capsula-track" id="capsulaTrack">
+
+      <div class="capsula-card">
+        <div class="capsula-img"><img src="capsula1.png" alt="Cómoda clásica" /></div>
+        <div class="capsula-card-body">
+          <h4>Cómoda Clásica</h4>
+          <p>Color Natural · Colección Raíz</p>
+        </div>
+      </div>
+
+      <div class="capsula-card">
+        <div class="capsula-img"><img src="capsula2.png" alt="Cómoda Roble" /></div>
+        <div class="capsula-card-body">
+          <h4>Cómoda Roble</h4>
+          <p>Color Nogal · Colección Raíz</p>
+        </div>
+      </div>
+
+      <div class="capsula-card">
+        <div class="capsula-img"><img src="capsula3.png" alt="Silla Ariza" /></div>
+        <div class="capsula-card-body">
+          <h4>Silla Ariza</h4>
+          <p>Color Avellana · Buenos Aires</p>
+        </div>
+      </div>
+
+      <div class="capsula-card">
+        <div class="capsula-img"><img src="capsula1.png" alt="Cómoda clásica" /></div>
+        <div class="capsula-card-body">
+          <h4>Silla Lagos</h4>
+          <p>Color Teca · Edición limitada</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-dots" id="capsulaDots">
+    <div class="dot active" data-i="0"></div>
+    <div class="dot" data-i="1"></div>
+    <div class="dot" data-i="2"></div>
+    <div class="dot" data-i="3"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <h2 class="fade-in">Nuestros estudiantes dicen:</h2>
+  <div class="testi-carousel-wrap fade-in">
+    <div class="testi-track" id="testiTrack">
+
+      <div class="testi-card">
+        <p class="quote">Llegué sin experiencia y terminé restaurando una cómoda antigua que tenía guardada desde hace años. Las clases son claras y el acompañamiento es excelente.</p>
+        <div class="testi-author">María R.</div>
+        <div class="testi-course">Alumna · Restauración Básica</div>
+      </div>
+
+      <div class="testi-card">
+        <p class="quote">Lo que más me gustó fue aprender técnicas profesionales que realmente se usan en el rubro. Hoy trabajo como restauradora gracias a la operativa en el curso.</p>
+        <div class="testi-author">Javier S.</div>
+        <div class="testi-course">Alumno · Restauración Avanzada</div>
+      </div>
+
+      <div class="testi-card">
+        <p class="quote">Las explicaciones paso a paso y las prácticas me dieron mucha confianza. Ahora restauro muebles para clientes que me quieren iniciar en la restauración.</p>
+        <div class="testi-author">Lucía M.</div>
+        <div class="testi-course">Alumna · Madera</div>
+      </div>
+
+      <div class="testi-card">
+        <p class="quote">Super recomendado para quienes quieren convertir una pasión en un oficio. Los docentes son muy atentos y siempre están disponibles para responder dudas.</p>
+        <div class="testi-author">Tomás A.</div>
+        <div class="testi-course">Alumno · Curso Avanzado</div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-dots" id="testiDots">
+    <div class="dot active" data-i="0"></div>
+    <div class="dot" data-i="1"></div>
+    <div class="dot" data-i="2"></div>
+    <div class="dot" data-i="3"></div>
+  </div>
+</section>
+
+<!-- CONTACTANOS -->
+<section id="contactanos">
+  <h2 class="fade-in"></h2>
+  <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+    <input type="text" placeholder="Tu nombre" required />
+    <input type="email" placeholder="Tu correo" required />
+    <textarea rows="4" placeholder="Tu mensaje..."></textarea>
+    <button type="submit" class="btn-white">Enviar mensaje</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2024 Raíz · Restauración de muebles · <a href="#contactanos">Contactanos</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
