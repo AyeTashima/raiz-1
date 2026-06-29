@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restauración para principiantes – Raíz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="curso-principiantes.css" />
+</head>
+<body>
+
+ <!-- ========== NAVBAR ========== -->
+<header class="nav">
+  <div class="nav__inner container">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/fondos destop-29.jpg" alt="Raíz" class="nav__logo-img" />
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#cursos">Cursos</a>
+      <a href="index.html#contacto">Contactanos</a>
+      <a href="#inscribirse" class="btn btn--outline-white">Inscribirse</a>
+    </nav>
+    <button class="nav__hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+  <!-- ========== HERO ========== -->
+  <section class="curso-hero">
+    <div class="curso-hero__inner">
+      <div class="curso-hero__text">
+        <span class="curso-hero__eyebrow">Curso</span>
+        <h1 class="curso-hero__titulo">Restauración para principiantes</h1>
+        <p class="curso-hero__docente">Un curso de <strong>Lucía Giraudo</strong></p>
+        <div class="curso-hero__cta" id="inscribirse">
+          <a href="#" class="btn-primary">Empezá ahora</a>
+          <div class="curso-hero__precio">
+            <span class="precio-monto">$12.000</span>
+            <span class="precio-moneda">ARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="curso-hero__video">
+        <!-- REEMPLAZAR: cambiá el src del poster por tu imagen de preview del video -->
+        <!-- REEMPLAZAR: cambiá el href del enlace por la URL de tu video -->
+        <a href="#" class="video-placeholder" aria-label="Ver video del curso">
+          <img
+            src="REEMPLAZAR-preview-video.jpg"
+            alt="Preview del curso de restauración"
+            class="video-thumb"
+          />
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.9"/>
+              <polygon points="10,8 17,12 10,16" fill="#F4621F"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <!-- ========== DESCRIPCIÓN ========== -->
+<section class="curso-desc">
+  <div class="curso-desc__inner">
+    <div class="curso-desc__texto">
+      <p>Descubrí cómo devolverles la vida a muebles de madera y transformarlos en piezas únicas llenas de personalidad. En este curso online aprenderás, paso a paso, las técnicas esenciales de restauración, desde la preparación de la superficie hasta los acabados finales.</p>
+      <p>Más que renovar un mueble, aprenderás a rescatar su historia a través de un proceso creativo y sostenible. Al finalizar el curso, contarás con las herramientas necesarias para restaurar tus propios muebles, desarrollar un nuevo hobby o dar los primeros pasos hacia un emprendimiento.</p>
+    </div>
+    <div class="curso-desc__imagen">
+      <!-- REEMPLAZAR: cambiá el src por tu imagen -->
+      <img src="REEMPLAZAR-imagen-descripcion.jpg" alt="Restauración de muebles" class="curso-desc__img" />
+    </div>
+  </div>
+</section>
+
+  <!-- ========== CONTENIDOS ========== -->
+  <section class="curso-contenidos">
+    <div class="curso-contenidos__inner">
+      <h2 class="section-title">Contenidos</h2>
+      <div class="acordeon" id="acordeon-contenidos">
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-num">U1</span>
+            <span class="acordeon-titulo">Primeros pasos en la restauración</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <ul class="video-list">
+              <li><span class="video-icon">▶</span> Bienvenida al curso</li>
+              <li><span class="video-icon">▶</span> Herramientas y materiales esenciales</li>
+              <li><span class="video-icon">▶</span> Tipos de madera y diagnóstico del mueble</li>
+              <li><span class="video-icon">▶</span> Preparación y lijado de superficies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-num">U2</span>
+            <span class="acordeon-titulo">Técnicas de restauración</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <ul class="video-list">
+              <li><span class="video-icon">▶</span> Reparación de grietas y uniones</li>
+              <li><span class="video-icon">▶</span> Masillado y recuperación de piezas</li>
+              <li><span class="video-icon">▶</span> Técnicas de pintura y renovación</li>
+              <li><span class="video-icon">▶</span> Acabados y protección de la madera</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-num">U3</span>
+            <span class="acordeon-titulo">Proyecto final</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <ul class="video-list">
+              <li><span class="video-icon">▶</span> Restauración completa de un mueble</li>
+              <li><span class="video-icon">▶</span> Detalles y terminaciones</li>
+              <li><span class="video-icon">▶</span> Consejos para lograr un acabado profesional</li>
+              <li><span class="video-icon">▶</span> Cierre del curso y próximos pasos</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<!-- ========== TESTIMONIOS ========== -->
+<section class="curso-testimonios">
+  <div class="curso-testimonios__inner">
+    <h2 class="section-title">Testimonios</h2>
+    <div class="testimonios-stagger">
+
+      <div class="testimonio-card stagger-card">
+        <!-- REEMPLAZAR: foto del proyecto del alumno -->
+        <div class="testimonio-proyecto">
+          <img src="REEMPLAZAR-proyecto-1.jpg" alt="Proyecto de María G." class="testimonio-proyecto-img" />
+        </div>
+        <div class="testimonio-contenido">
+          <!-- REEMPLAZAR: foto de perfil del alumno -->
+          <img src="REEMPLAZAR-perfil-1.jpg" alt="María G." class="testimonio-foto" />
+          <blockquote>
+            "Llegué sin experiencia y terminé restaurando una cómoda antigua que tenía guardada mi familia desde hace años. Las clases son claras y el acompañamiento es excelente."
+          </blockquote>
+          <cite>María G.<br><span>Alumna de Restauración Básica</span></cite>
+        </div>
+      </div>
+
+      <div class="testimonio-card stagger-card">
+        <!-- REEMPLAZAR: foto del proyecto del alumno -->
+        <div class="testimonio-proyecto">
+          <img src="REEMPLAZAR-proyecto-2.jpg" alt="Proyecto de Javier R." class="testimonio-proyecto-img" />
+        </div>
+        <div class="testimonio-contenido">
+          <!-- REEMPLAZAR: foto de perfil del alumno -->
+          <img src="REEMPLAZAR-perfil-2.jpg" alt="Javier R." class="testimonio-foto" />
+          <blockquote>
+            "Lo que más me gustó fue aprender técnicas profesionales que realmente se usan en el oficio. Hoy realizo trabajos por encargo gracias a lo aprendido en el curso."
+          </blockquote>
+          <cite>Javier R.<br><span>Alumno de Restauración Avanzada</span></cite>
+        </div>
+      </div>
+
+      <div class="testimonio-card stagger-card">
+        <!-- REEMPLAZAR: foto del proyecto del alumno -->
+        <div class="testimonio-proyecto">
+          <img src="REEMPLAZAR-proyecto-3.jpg" alt="Proyecto de Lucía M." class="testimonio-proyecto-img" />
+        </div>
+        <div class="testimonio-contenido">
+          <!-- REEMPLAZAR: foto de perfil del alumno -->
+          <img src="REEMPLAZAR-perfil-3.jpg" alt="Lucía M." class="testimonio-foto" />
+          <blockquote>
+            "Las explicaciones paso a paso y las prácticas me dieron mucha confianza. Recomiendo el curso a cualquiera que quiera iniciarse en la restauración."
+          </blockquote>
+          <cite>Lucía M.<br><span>Alumna</span></cite>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="curso-faq">
+    <div class="curso-faq__inner">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="acordeon" id="acordeon-faq">
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Cómo es la modalidad del curso?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>El curso es 100% online y está compuesto por clases grabadas que podés ver a tu ritmo, desde cualquier dispositivo y en el momento que te resulte más cómodo.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Necesito tener experiencia previa?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>No. El curso está diseñado tanto para principiantes como para personas con conocimientos previos que quieran perfeccionar sus técnicas de restauración.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Qué materiales y herramientas necesito?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Al comenzar el curso recibirás una lista detallada de materiales y herramientas recomendadas. Muchas de las prácticas pueden realizarse con elementos básicos y de fácil acceso.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Obtengo un certificado al finalizar?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Sí. Al completar todas las lecciones y actividades del curso recibirás un certificado digital que acredita tu participación y los conocimientos adquiridos.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Cuánto tiempo tendré acceso al curso?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Una vez inscripto, tendrás acceso al contenido para que puedas avanzar a tu propio ritmo y volver a consultar las clases cuando lo necesites.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Qué aprenderé durante el curso?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Aprenderás a evaluar el estado de un mueble, reparar daños, preparar superficies, aplicar técnicas de restauración, pintura y acabados para devolverle vida a piezas de madera.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Puedo aplicar lo aprendido para emprender?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Sí. Además de las técnicas de restauración, adquirirás conocimientos que te permitirán realizar proyectos personales o comenzar a ofrecer servicios de restauración de muebles.</p>
+          </div>
+        </div>
+
+        <div class="acordeon-item">
+          <button class="acordeon-header" aria-expanded="false">
+            <span class="acordeon-titulo">¿Las clases incluyen proyectos prácticos?</span>
+            <span class="acordeon-icon">+</span>
+          </button>
+          <div class="acordeon-body">
+            <p>Sí. A lo largo del curso trabajarás sobre ejemplos y proyectos reales para poner en práctica cada técnica y ganar confianza en el proceso de restauración.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="curso-cta-final">
+    <div class="curso-cta-final__inner">
+      <h2>¿Lista para empezar?</h2>
+      <p>Inscribite hoy y comenzá tu camino en la restauración de muebles.</p>
+      <div class="curso-cta-final__acciones">
+        <a href="#" class="btn-primary">Inscribirse ahora</a>
+        <span class="precio-monto-final">$12.000 ARS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <!-- REEMPLAZAR: mismo logo -->
+        <img src="logo.png" alt="Raíz" class="logo-img" />
+        <p>Escuela de restauración de muebles</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#cursos">Cursos</a>
+        <a href="index.html#contacto">Contáctanos</a>
+      </nav>
+      <p class="footer__copy">© 2025 Raíz. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="curso-principiantes.js"></script>
+
+</body>
+</html>

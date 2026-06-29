@@ -1,0 +1,515 @@
+/* =============================================
+   CURSO PRINCIPIANTES — estilos específicos
+   Depende de las custom properties de styles.css
+   ============================================= */
+
+/* ── HERO ── */
+.curso-hero {
+  background-color: var(--black);
+  padding: 100px 0 60px;
+}
+
+.curso-hero__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.curso-hero__eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.curso-hero__titulo {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.curso-hero__docente {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0 0 32px;
+}
+
+.curso-hero__docente strong {
+  color: var(--white);
+}
+
+.curso-hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.curso-hero__precio {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.precio-monto {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.precio-moneda {
+  font-size: 0.75rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Video placeholder */
+.curso-hero__video {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.video-placeholder {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #2a2a2a;
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  transition: transform 0.2s ease;
+}
+
+.video-placeholder:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ── DESCRIPCIÓN ── */
+.curso-desc {
+  padding: 72px 0;
+  background-color: #faf6ed;
+}
+
+.curso-desc__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.curso-desc__texto p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--black);
+  margin: 0 0 20px;
+}
+
+.curso-desc__texto p:last-child {
+  margin-bottom: 0;
+}
+
+.curso-desc__imagen {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: #e8e0d5;
+}
+
+.curso-desc__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .curso-desc__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── ACORDEÓN ── */
+.acordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border, #e0e0e0);
+}
+
+.acordeon-item {
+  border-bottom: 1px solid var(--border, #e0e0e0);
+}
+
+.acordeon-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.acordeon-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.08em;
+  min-width: 28px;
+}
+
+.acordeon-titulo {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.acordeon-icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--orange);
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.acordeon-item.is-open .acordeon-icon {
+  transform: rotate(45deg);
+}
+
+.acordeon-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.acordeon-body > * {
+  padding: 0 0 20px 44px;
+}
+
+/* Video list */
+.video-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 20px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.video-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.video-icon {
+  color: var(--orange);
+  font-size: 0.7rem;
+}
+
+/* FAQ body */
+.curso-faq .acordeon-body p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  padding: 0 0 20px 0;
+}
+
+/* ── TESTIMONIOS ── */
+.curso-testimonios {
+  padding: 80px 0;
+  background-color: #faf6ed;
+}
+
+.curso-testimonios__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.curso-testimonios .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonios-stagger {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.testimonio-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.6s ease;
+}
+
+.testimonio-card:nth-child(1) { transition-delay: 0s;    }
+.testimonio-card:nth-child(2) { transition-delay: 0.2s;  }
+.testimonio-card:nth-child(3) { transition-delay: 0.4s;  }
+
+.testimonio-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Foto del proyecto */
+.testimonio-proyecto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #e8e0d5;
+  overflow: hidden;
+}
+
+.testimonio-proyecto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido inferior */
+.testimonio-contenido {
+  background-color: var(--orange);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testimonio-foto {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.3);
+}
+
+.testimonio-card blockquote {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.92);
+  font-style: italic;
+}
+
+.testimonio-card cite {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+.testimonio-card cite span {
+  display: block;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.75rem;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .testimonios-stagger {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+  }
+
+  .testimonios-stagger::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonio-card {
+    min-width: 80%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .testimonio-card:nth-child(1),
+  .testimonio-card:nth-child(2),
+  .testimonio-card:nth-child(3) {
+    transition-delay: 0s;
+  }
+}
+
+/* ── FAQ ── */
+.curso-faq {
+  padding: 72px 0;
+  background-color: var(--gray-bg, #f5f5f5);
+}
+
+.curso-faq__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── CTA FINAL ── */
+.curso-cta-final {
+  padding: 80px 0;
+  background-color: var(--orange);
+  text-align: center;
+}
+
+.curso-cta-final__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.curso-cta-final h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 12px;
+}
+
+.curso-cta-final p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 32px;
+}
+
+.curso-cta-final__acciones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.precio-monto-final {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.curso-cta-final .btn-primary {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.curso-cta-final .btn-primary:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background-color: var(--black);
+  padding: 48px 0 32px;
+}
+
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.footer__brand p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 8px 0 0;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.footer__nav a {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__nav a:hover {
+  color: var(--orange);
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .curso-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .curso-hero {
+    padding: 80px 0 48px;
+  }
+
+  .testimonios-stagger {
+    flex-direction: column;
+  }
+
+  .testimonio-card:nth-child(1),
+  .testimonio-card:nth-child(2),
+  .testimonio-card:nth-child(3) {
+    margin-top: 0;
+  }
+}
