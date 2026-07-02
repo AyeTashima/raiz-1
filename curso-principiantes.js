@@ -69,3 +69,16 @@ document.querySelectorAll('.acordeon').forEach(function (acordeon) {
     observer.observe(card);
   });
 })();
+
+
+// ── CONTENIDOS: flip cards al tocar ──
+(function () {
+  var cards = document.querySelectorAll('.flip-card');
+  if (!cards.length) return;
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      card.classList.toggle('is-flipped');
+    });
+  });
+})();

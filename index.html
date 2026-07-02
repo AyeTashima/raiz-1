@@ -27,24 +27,32 @@
     </div>
   </header>
 
-  <!-- HERO -->
- <section class="hero">
-  <div class="container hero__grid">
+ <!-- HERO -->
+<section class="hero">
+  <!-- Fondo desktop: spotlight con revelado -->
+  <div class="hero__bg" id="heroImgStack">
+    <img src="assets/sillon-antes.jpeg" alt="Sillón antes de restaurar" class="hero__img-base"> <!-- REEMPLAZAR -->
+    <img src="assets/sillon-despues.jpeg" alt="Sillón restaurado" class="hero__img-reveal"> <!-- REEMPLAZAR -->
+    <div class="hero__spot-frame" id="heroSpotFrame"></div>
+  </div>
+
+  <!-- Fondo mobile: video -->
+  <video class="hero__video-mobile" autoplay muted loop playsinline poster="assets/sillon-despues.jpg"> <!-- REEMPLAZAR -->
+    <source src="assets/hero-mobile.mp4" type="video/mp4"> <!-- REEMPLAZAR -->
+  </video>
+
+  <div class="container hero__content">
     <div class="hero__text">
-      <h1><span class="accent">Transformamos</span> muebles.<br>Inspiramos personas.</h1>
-      <p>Desde cero y a tu ritmo, aprendé a restaurar muebles de madera con técnicas prácticas y acompañamiento paso a paso.</p>
+      <h1> <span class="accent">Transformamos</span>&nbsp;muebles.<br>Inspiramos&nbsp;personas.</h1>
+    
       <a href="#" class="btn btn--primary">Inscribirse</a>
     </div>
-    
-    <div class="hero__video">
-      <img src="assets/WhatsApp Video 2026-06-25 at 2.26.39 PM.gif" alt="Animación de restauración de muebles">
-    </div>
-    
   </div>
 </section>
 
   <!-- STATS -->
-  <section class="stats">
+  <!-- STATS -->
+  <section class="stats" style="background-image: url('assets/destop-40.jpg');">
     <div class="container stats__grid">
       <div class="stat">
         <span class="stat__number">+300</span>
@@ -61,14 +69,16 @@
     </div>
   </section>
 
+ 
+
   <!-- NOSOTROS -->
-  <section class="about">
+  <section class="about" style="--bg-desktop: url('assets/fondos destop-32.jpg');">
     <div class="container">
       <!-- Fila superior: texto + imagen -->
       <div class="about__top">
         <div class="about__intro">
           <p class="section-eyebrow">Nosotros</p>
-          <h2>En Raíz creemos en el poder de <span class="accent">transformar.</span></h2>
+          <h2>Volver a las<span class="accent"> raíces</span></h2>
           <p>Somos una comunidad creativa que enseña restauración de muebles, reciclaje y diseño a través de cursos online pensados <br>para quienes disfrutan crear con sus manos.</p>
           <a href="curso-principiantes.html" class="btn btn--primary">Inscribirse</a>
         </div>
@@ -81,7 +91,7 @@
 
   <div class="feature-card">
     <div class="feature-card__img-wrap">
-      <img src="assets/fondos destop-27.jpg" alt="Técnica rigurosa" class="feature-card__img" />
+      <img src="assets/fondosdestop-27.jpg" alt="Técnica rigurosa" class="feature-card__img" />
       <!-- Cuando tengas la imagen: cambiá src="" por src="tu-imagen.jpg" -->
     </div>
     <div class="feature-card__body">
@@ -92,7 +102,7 @@
 
   <div class="feature-card">
     <div class="feature-card__img-wrap">
-      <img src="assets/fondos destop-26.jpg" alt="Mirada de diseño" class="feature-card__img" />
+      <img src="assets/fondosdestop-26.jpg" alt="Mirada de diseño" class="feature-card__img" />
     </div>
     <div class="feature-card__body">
       <h3 class="feature-card__title">Mirada de diseño</h3>
@@ -102,7 +112,7 @@
 
   <div class="feature-card">
     <div class="feature-card__img-wrap">
-      <img src="assets/fondos destop-28.jpg" alt="Sustentabilidad real" class="feature-card__img" />
+      <img src="assets/fondosdestop-28.jpg" alt="Sustentabilidad real" class="feature-card__img" />
     </div>
     <div class="feature-card__body">
       <h3 class="feature-card__title">Sustentabilidad real</h3>
@@ -119,13 +129,15 @@
    CURSOS — Reemplazá el bloque <section class="courses"> con esto
    ============================================================ -->
 
-<section class="courses">
+<section class="courses" style="background-image: url('assets/estop-33.jpg');">
   <div class="container">
     <p class="section-eyebrow">Nuestros Cursos</p>
     <h2 class="accent">Cursos para transformar</h2>
     <p class="courses__subtitle">Descubrí técnicas de restauración, tapicería y diseño en una comunidad creativa que comparte la pasión por recuperar, reinventar y crear.</p>
     <a href="#" class="courses__more">Más cursos +</a>
 
+
+    
     <div class="courses__grid">
 
       <div class="course-card">
@@ -196,18 +208,18 @@
 </section>
 
  <!-- ANTES Y DESPUÉS -->
-<section class="before-after">
+<section class="before-after" style="--bg-desktop: url('assets/destop-41.jpg');">
   <div class="container">
     <p class="section-eyebrow">Proyectos de nuestros alumnos</p>
-    <h2><span class="accent-green">Antes y después</span></h2>
+    <h2><span class="accent--white">Antes y después</span></h2>
     <p>Cada mueble merece una segunda oportunidad. Descubrí cómo nuestros alumnos transforman piezas con historia en objetos únicos.</p>
 
     <div class="ba-grid">
 
       <div class="ba-item ba-item--1">
         <div class="ba-slider">
-          <div class="ba-before" style="background-image: url('assets/antes/fondos\ destop-23.jpg")></div>
-          <div class="ba-after" style="background-image: url('assets/antes/fondos\ destop-19.jpg');"></div>
+          <div class="ba-before" style="background-image: url('assets/antes/antes-19.jpg")></div>
+          <div class="ba-after" style="background-image: url('assets/antes/antes-15.jpg');"></div>
           <div class="ba-handle">
             <div class="ba-handle__line"></div>
             <div class="ba-handle__circle">◀▶</div>
@@ -219,8 +231,8 @@
 
       <div class="ba-item ba-item--2">
         <div class="ba-slider">
-          <div class="ba-before" style="background-image: url('assets/antes/fondos\ destop-25.jpg');"></div>
-          <div class="ba-after" style="background-image: url('assets/antes/fondos\ destop-24.jpg');"></div>
+          <div class="ba-before" style="background-image: url('assets/antes/antes-21.jpg');"></div>
+          <div class="ba-after" style="background-image: url('assets/antes/antes-20.jpg');"></div>
           <div class="ba-handle">
             <div class="ba-handle__line"></div>
             <div class="ba-handle__circle">◀▶</div>
@@ -232,8 +244,8 @@
 
       <div class="ba-item ba-item--3">
         <div class="ba-slider">
-          <div class="ba-before" style="background-image: url('assets/antes/fondos\ destop-22.jpg');"></div>
-          <div class="ba-after" style="background-image: url('assets/antes/fondos\ destop-18.jpg');"></div>
+          <div class="ba-before" style="background-image: url('assets/antes/antes-18.jpg');"></div>
+          <div class="ba-after" style="background-image: url('assets/antes/destop-14.jpg');"></div>
           <div class="ba-handle">
             <div class="ba-handle__line"></div>
             <div class="ba-handle__circle">◀▶</div>
@@ -245,8 +257,8 @@
 
       <div class="ba-item ba-item--4">
         <div class="ba-slider">
-          <div class="ba-before" style="background-image: url('assets/antes/fondos\ destop-20.jpg');"></div>
-          <div class="ba-after" style="background-image: url('assets/antes/fondos\ destop-21.jpg"></div>
+          <div class="ba-before" style="background-image: url('assets/antes/antes-16.jpg');"></div>
+          <div class="ba-after" style="background-image: url('assets/antes/antes-17.jpg"></div>
           <div class="ba-handle">
             <div class="ba-handle__line"></div>
             <div class="ba-handle__circle">◀▶</div>
@@ -262,7 +274,7 @@
 
 
   <!-- TESTIMONIOS -->
-  <section class="testimonials">
+  <section class="testimonials" style="background-image: url('assets/fondos destop-32.jpg');">
     <div class="container">
       <p class="section-eyebrow">Testimonios de nuestros alumnos</p>
       <h2>Muebles renovados,<br>historias que continúan</h2>
@@ -355,19 +367,37 @@
   </section>
 
   <!-- PRÓXIMAMENTE -->
-  <section class="coming-soon" style="background-image: url('assets/grandes\ fondos\ destop-10.jpg');">
-  <div class="container coming-soon__grid">
-    <div class="coming-soon__text">
-      <p class="coming-soon__eyebrow"> </p>
-      <p class="coming-soon__sub">Muebles Cápsula</p>
-      <h2>Piezas con Historia</h2>
-      <p>Una selección de muebles restaurados en ediciones únicas. 
-        <br>Objetos con historia que vuelven a cobrar vida a través del <br>diseño y la creatividad.</p>
-      <a href="#">Ver más +</a>
+<section class="coming-soon">
+  <div class="coming-soon__split">
+
+    <!-- Mitad izquierda: fondo liso + texto -->
+    <div class="coming-soon__text-panel">
+      <div class="coming-soon__text">
+        <p class="coming-soon__sub">Muebles Cápsula</p>
+        <h2>Piezas con Historia</h2>
+        <p>Una selección de muebles restaurados en ediciones únicas.
+          <br>Objetos con historia que vuelven a cobrar vida a través del <br>diseño y la creatividad.</p>
+        <a href="#">Ver más +</a>
+      </div>
     </div>
-   <div class="coming-soon__img">
-  <img src="assets/fondos destop-13.png" alt="Mueble cápsula restaurado">
-</div>
+
+    <!-- Mitad derecha: carrusel infinito -->
+    <div class="coming-soon__carousel-panel">
+      <div class="coming-soon__track">
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-46.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-47.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-48.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-49.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-52.jpg');"></div>
+        <!-- Set duplicado, necesario para que el loop sea infinito sin cortes -->
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-46.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-47.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-48.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-49.jpg');"></div>
+        <div class="coming-soon__slide" style="background-image: url('assets/carrusel-52.jpg');"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -436,7 +466,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section class="contact">
+  <section class="contact" style="background-image: url('assets/destop-41.jpg');">
     <div class="container contact__grid">
       <div class="contact__text">
         <p class="section-eyebrow">Contactanos</p>
@@ -463,10 +493,7 @@
           <input type="email" placeholder="Tu email" />
           <button class="btn btn--primary btn--sm">→</button>
         </div>
-        <div class="footer__social">
-          <a href="#" aria-label="Instagram">⬤</a>
-          <a href="#" aria-label="Facebook">⬤</a>
-        </div>
+        
       </div>
       <div class="footer__col">
         <h5>Redes</h5>

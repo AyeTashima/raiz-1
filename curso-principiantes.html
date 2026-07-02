@@ -30,68 +30,98 @@
   </div>
 </header>
 
-  <!-- ========== HERO ========== -->
-  <section class="curso-hero">
+<!-- ========== HERO ========== -->
+  <section class="curso-hero" style="background-image: url('assets/hombre-45.jpg');">
     <div class="curso-hero__inner">
       <div class="curso-hero__text">
         <span class="curso-hero__eyebrow">Curso</span>
         <h1 class="curso-hero__titulo">Restauración para principiantes</h1>
         <p class="curso-hero__docente">Un curso de <strong>Lucía Giraudo</strong></p>
         <div class="curso-hero__cta" id="inscribirse">
-          <a href="#" class="btn-primary">Empezá ahora</a>
+         <a href="#" class="btn btn--primary">Empezá ahora</a>
           <div class="curso-hero__precio">
             <span class="precio-monto">$12.000</span>
             <span class="precio-moneda">ARS</span>
           </div>
         </div>
       </div>
-      <div class="curso-hero__video">
-        <!-- REEMPLAZAR: cambiá el src del poster por tu imagen de preview del video -->
-        <!-- REEMPLAZAR: cambiá el href del enlace por la URL de tu video -->
-        <a href="#" class="video-placeholder" aria-label="Ver video del curso">
-          <img
-            src="REEMPLAZAR-preview-video.jpg"
-            alt="Preview del curso de restauración"
-            class="video-thumb"
-          />
-          <div class="video-play-btn">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.9"/>
-              <polygon points="10,8 17,12 10,16" fill="#F4621F"/>
-            </svg>
-          </div>
-        </a>
-      </div>
     </div>
   </section>
 
  <!-- ========== DESCRIPCIÓN ========== -->
-<section class="curso-desc">
+<section class="curso-desc" style="background-image: url('assets/fondosdestop-32.jpg');">
   <div class="curso-desc__inner">
     <div class="curso-desc__texto">
       <p>Descubrí cómo devolverles la vida a muebles de madera y transformarlos en piezas únicas llenas de personalidad. En este curso online aprenderás, paso a paso, las técnicas esenciales de restauración, desde la preparación de la superficie hasta los acabados finales.</p>
       <p>Más que renovar un mueble, aprenderás a rescatar su historia a través de un proceso creativo y sostenible. Al finalizar el curso, contarás con las herramientas necesarias para restaurar tus propios muebles, desarrollar un nuevo hobby o dar los primeros pasos hacia un emprendimiento.</p>
     </div>
-    <div class="curso-desc__imagen">
-      <!-- REEMPLAZAR: cambiá el src por tu imagen -->
-      <img src="REEMPLAZAR-imagen-descripcion.jpg" alt="Restauración de muebles" class="curso-desc__img" />
+
+    <div class="curso-desc__card">
+      <ul class="curso-card__list">
+        <li class="curso-card__item">
+          <span class="curso-card__icon">★</span>
+          99% valoraciones positivas <span class="curso-card__muted">(REEMPLAZAR-cantidad-reseñas)</span>
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">👤</span>
+          100 estudiantes
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">▶</span>
+          Lecciones (5h totales)
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">📎</span>
+          2 recursos adicionales
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">⏱</span>
+          Online y a tu ritmo
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">🎧</span>
+          Audio: Español, Inglés
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">💬</span>
+          Subtítulos: Español, Inglés
+        </li>
+        <li class="curso-card__item">
+          <span class="curso-card__icon">📊</span>
+          Nivel: Iniciación
+        </li>
+      </ul>
+
+      <div class="curso-card__price">
+        <span class="curso-card__monto">$12.000</span>
+        <span class="curso-card__moneda">ARS</span>
+      </div>
+
+      <a href="#inscribirse" class="btn btn--primary btn--block">Inscribirse</a>
     </div>
   </div>
 </section>
 
-  <!-- ========== CONTENIDOS ========== -->
-  <section class="curso-contenidos">
-    <div class="curso-contenidos__inner">
-      <h2 class="section-title">Contenidos</h2>
-      <div class="acordeon" id="acordeon-contenidos">
+ <!-- ========== CONTENIDOS ========== -->
+<section class="curso-contenidos" style="background-image: url('assets/destop-41.jpg');">
+  <div class="curso-contenidos__inner">
+    <h2 class="section-title">Contenidos</h2>
+  
+    <div class="contenidos-grid">
 
-        <div class="acordeon-item">
-          <button class="acordeon-header" aria-expanded="false">
-            <span class="acordeon-num">U1</span>
-            <span class="acordeon-titulo">Primeros pasos en la restauración</span>
-            <span class="acordeon-icon">+</span>
-          </button>
-          <div class="acordeon-body">
+      <div class="flip-card">
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+  <!-- REEMPLAZAR: foto de la unidad -->
+  <img src="assets/fondosdestop-45.jpg" alt="Primeros pasos en la restauración" class="flip-card__foto" />
+  <div class="flip-card__overlay"></div>
+  <div class="flip-card__front-texto">
+    <span class="flip-card__num">U1</span>
+    <span class="flip-card__titulo">Primeros pasos en la restauración</span>
+  </div>
+</div>
+          
+          <div class="flip-card__back">
             <ul class="video-list">
               <li><span class="video-icon">▶</span> Bienvenida al curso</li>
               <li><span class="video-icon">▶</span> Herramientas y materiales esenciales</li>
@@ -100,14 +130,20 @@
             </ul>
           </div>
         </div>
+      </div>
 
-        <div class="acordeon-item">
-          <button class="acordeon-header" aria-expanded="false">
-            <span class="acordeon-num">U2</span>
-            <span class="acordeon-titulo">Técnicas de restauración</span>
-            <span class="acordeon-icon">+</span>
-          </button>
-          <div class="acordeon-body">
+      <div class="flip-card">
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+  <!-- REEMPLAZAR: foto de la unidad -->
+  <img src="assets/fondosdestop-46.jpg" alt="Técnicas de restauración" class="flip-card__foto" />
+  <div class="flip-card__overlay"></div>
+  <div class="flip-card__front-texto">
+    <span class="flip-card__num">U2</span>
+    <span class="flip-card__titulo">Técnicas de restauración</span>
+  </div>
+</div>
+          <div class="flip-card__back">
             <ul class="video-list">
               <li><span class="video-icon">▶</span> Reparación de grietas y uniones</li>
               <li><span class="video-icon">▶</span> Masillado y recuperación de piezas</li>
@@ -116,14 +152,20 @@
             </ul>
           </div>
         </div>
+      </div>
 
-        <div class="acordeon-item">
-          <button class="acordeon-header" aria-expanded="false">
-            <span class="acordeon-num">U3</span>
-            <span class="acordeon-titulo">Proyecto final</span>
-            <span class="acordeon-icon">+</span>
-          </button>
-          <div class="acordeon-body">
+      <div class="flip-card">
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+  <!-- REEMPLAZAR: foto de la unidad -->
+  <img src="assets/fondosdestop-47.jpg" alt="Proyecto final" class="flip-card__foto" />
+  <div class="flip-card__overlay"></div>
+  <div class="flip-card__front-texto">
+    <span class="flip-card__num">U3</span>
+    <span class="flip-card__titulo">Proyecto final</span>
+  </div>
+</div>
+          <div class="flip-card__back">
             <ul class="video-list">
               <li><span class="video-icon">▶</span> Restauración completa de un mueble</li>
               <li><span class="video-icon">▶</span> Detalles y terminaciones</li>
@@ -132,14 +174,14 @@
             </ul>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
 
+    </div>
+  </div>
+</section>
 
 <!-- ========== TESTIMONIOS ========== -->
-<section class="curso-testimonios">
+<section class="curso-testimonios" style="background-image: url('assets/ufondos-destop-31.jpg');">
   <div class="curso-testimonios__inner">
     <h2 class="section-title">Testimonios</h2>
     <div class="testimonios-stagger">
@@ -147,11 +189,11 @@
       <div class="testimonio-card stagger-card">
         <!-- REEMPLAZAR: foto del proyecto del alumno -->
         <div class="testimonio-proyecto">
-          <img src="REEMPLAZAR-proyecto-1.jpg" alt="Proyecto de María G." class="testimonio-proyecto-img" />
+          <img src="assets/fondosdestop-43.jpg" alt="Proyecto de María G." class="testimonio-proyecto-img" />
         </div>
         <div class="testimonio-contenido">
           <!-- REEMPLAZAR: foto de perfil del alumno -->
-          <img src="REEMPLAZAR-perfil-1.jpg" alt="María G." class="testimonio-foto" />
+          <img src="assets/fondosdestop-38.jpg" alt="María G." class="testimonio-foto" />
           <blockquote>
             "Llegué sin experiencia y terminé restaurando una cómoda antigua que tenía guardada mi familia desde hace años. Las clases son claras y el acompañamiento es excelente."
           </blockquote>
@@ -162,11 +204,11 @@
       <div class="testimonio-card stagger-card">
         <!-- REEMPLAZAR: foto del proyecto del alumno -->
         <div class="testimonio-proyecto">
-          <img src="REEMPLAZAR-proyecto-2.jpg" alt="Proyecto de Javier R." class="testimonio-proyecto-img" />
+          <img src="assets/fondosdestop-44.jpg" alt="Proyecto de Javier R." class="testimonio-proyecto-img" />
         </div>
         <div class="testimonio-contenido">
           <!-- REEMPLAZAR: foto de perfil del alumno -->
-          <img src="REEMPLAZAR-perfil-2.jpg" alt="Javier R." class="testimonio-foto" />
+          <img src="assets/fondosdestop-36.jpg" alt="Javier R." class="testimonio-foto" />
           <blockquote>
             "Lo que más me gustó fue aprender técnicas profesionales que realmente se usan en el oficio. Hoy realizo trabajos por encargo gracias a lo aprendido en el curso."
           </blockquote>
@@ -177,11 +219,11 @@
       <div class="testimonio-card stagger-card">
         <!-- REEMPLAZAR: foto del proyecto del alumno -->
         <div class="testimonio-proyecto">
-          <img src="REEMPLAZAR-proyecto-3.jpg" alt="Proyecto de Lucía M." class="testimonio-proyecto-img" />
+          <img src="assets/fondosdestop-42.jpg" alt="Proyecto de Lucía M." class="testimonio-proyecto-img" />
         </div>
         <div class="testimonio-contenido">
           <!-- REEMPLAZAR: foto de perfil del alumno -->
-          <img src="REEMPLAZAR-perfil-3.jpg" alt="Lucía M." class="testimonio-foto" />
+          <img src="assets/fondosdestop-37.jpg" alt="Lucía M." class="testimonio-foto" />
           <blockquote>
             "Las explicaciones paso a paso y las prácticas me dieron mucha confianza. Recomiendo el curso a cualquiera que quiera iniciarse en la restauración."
           </blockquote>
@@ -285,33 +327,56 @@
   </section>
 
   <!-- ========== CTA FINAL ========== -->
-  <section class="curso-cta-final">
-    <div class="curso-cta-final__inner">
-      <h2>¿Lista para empezar?</h2>
-      <p>Inscribite hoy y comenzá tu camino en la restauración de muebles.</p>
-      <div class="curso-cta-final__acciones">
-        <a href="#" class="btn-primary">Inscribirse ahora</a>
-        <span class="precio-monto-final">$12.000 ARS</span>
+<!-- REEMPLAZAR: imagen de fondo de la sección -->
+<section class="curso-cta-final" style="background-image: url('assets/fondo30-30.jpg');">
+  <div class="curso-cta-final__inner">
+    <h2>¿Lista para empezar?</h2>
+    <p>Inscribite hoy y comenzá tu camino en la restauración de muebles.</p>
+    <div class="curso-cta-final__acciones">
+      <a href="#" class="btn btn--primary">Inscribirse ahora</a>
+      <span class="precio-monto-final">$12.000 ARS</span>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__logo">Raíz</p>
+        <p>Suscribite a nuestro newsletter</p>
+        <div class="footer__newsletter">
+          <input type="email" placeholder="Tu email" />
+          <button class="btn btn--primary btn--sm">→</button>
+        </div>
+        
+      </div>
+      <div class="footer__col">
+        <h5>Redes</h5>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+      <div class="footer__col">
+        <h5>Info</h5>
+        <a href="#">Nosotros</a>
+        <a href="#">Cursos</a>
+        <a href="#">Preguntas</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="footer__col">
+        <h5>Nosotros</h5>
+        <a href="#">Nosotros</a>
+        <a href="#">Cursos</a>
+        <a href="#">Preguntas</a>
+        <a href="#">Contacto</a>
       </div>
     </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <!-- REEMPLAZAR: mismo logo -->
-        <img src="logo.png" alt="Raíz" class="logo-img" />
-        <p>Escuela de restauración de muebles</p>
-      </div>
-      <nav class="footer__nav">
-        <a href="index.html#nosotros">Nosotros</a>
-        <a href="index.html#cursos">Cursos</a>
-        <a href="index.html#contacto">Contáctanos</a>
-      </nav>
-      <p class="footer__copy">© 2025 Raíz. Todos los derechos reservados.</p>
+    <div class="footer__bottom container">
+      <p>Copyright 2024 © Raíz. Todos los derechos reservados.</p>
+      <p>Plataforma diseñada por Ayelen Bustos Tashima | Políticas de Privacidad</p>
     </div>
   </footer>
+
 
   <script src="script.js"></script>
   <script src="curso-principiantes.js"></script>

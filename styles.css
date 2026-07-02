@@ -11,7 +11,7 @@
   --black:    #1A1A1A;
   --white:    #FFFFFF;
   --border:   #E0E0E0;
-  --rojo:   #970a12;
+  --rojo:   #ff7d41;
   --amarillo:   #fecc64;
 
   --font: 'Poppins', sans-serif;
@@ -150,14 +150,39 @@ img { display: block; max-width: 100%; }
    HERO
    ============================================================ */
 .hero {
+  position: relative;
   padding: 72px 0 60px;
+  overflow: hidden;
+  min-height: 650px;
 }
 
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+@media (max-width: 768px) {
+  .hero {
+    min-height: 450px;
+  }
+}
+
+.hero__bg,
+.hero__video-mobile {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero__video-mobile {
+  display: none;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__text {
+  max-width: 500px;
 }
 
 .hero__text h1 {
@@ -172,45 +197,52 @@ img { display: block; max-width: 100%; }
   margin-bottom: 32px;
   max-width: 400px;
 }
-.hero__video {
-  background: #1A1A1A;
-  border-radius: var(--radius);
-  aspect-ratio: 16/9;
-  overflow: hidden; /* Corta las esquinas del GIF para que queden redondeadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* --- Spotlight reveal (desktop) --- */
+.hero__bg {
+  cursor: none;
+  --hx: 50%;
+  --hy: 50%;
+  --r: 220px;
 }
 
-/* 👇 AGREGÁ ESTO: Controla el comportamiento del GIF dentro del recuadro */
-.hero__video img {
+.hero__img-base,
+.hero__img-reveal {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-/* ── VIDEO PLACEHOLDER ── */
-/* Podés borrar la clase .video-placeholder vieja si ya no la usás en ningún otro lado */
-/* ── VIDEO PLACEHOLDER ── */
-.video-placeholder {
-  background: var(--dark);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-size: 24px;
-  font-weight: 700;
-  width: 100%;
-  aspect-ratio: 16/9;
+.hero__img-reveal {
+  clip-path: circle(var(--r) at var(--hx) var(--hy));
+  -webkit-clip-path: circle(var(--r) at var(--hx) var(--hy));
 }
 
-.video-placeholder--large {
-  border-radius: 0;
-  aspect-ratio: 21/6;
-  max-height: 320px;
-  background: var(--dark);
+.hero__spot-frame {
+  position: absolute;
+  width: calc(var(--r) * 2);
+  height: calc(var(--r) * 2);
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  left: var(--hx);
+  top: var(--hy);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hero__bg:hover .hero__spot-frame {
+  opacity: 1;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .hero__bg { display: none; }
+  .hero__video-mobile { display: block; }
 }
 
 /* ============================================================
@@ -218,6 +250,15 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .stats {
   background: var(--orange);
+  padding: 48px 0;
+}
+
+.stats {
+  background-color: var(--orange); /* fallback por si la imagen tarda en cargar o falla */
+  background-image: var(--stats-bg, none); /* opcional, ver nota abajo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 48px 0;
 }
 
@@ -246,6 +287,16 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .about {
   padding: 80px 0;
+  background-image: var(--bg-desktop);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .about {
+    background-image: url('assets/nuev-05.jpg');
+  }
 }
 
 /* Fila superior: texto izquierda + imagen derecha */
@@ -320,7 +371,7 @@ img { display: block; max-width: 100%; }
   height: 72px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #1A1A1A; /* placeholder — se ve hasta que ponés el src */
+  background-color: #fff;
 }
 
 .feature-card__img {
@@ -365,7 +416,6 @@ rses snippet · CSS
  
 .courses {
   padding: 80px 0;
-  background-image: url(assets/fondos\ destop-11.jpg);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -375,7 +425,7 @@ rses snippet · CSS
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 900;
   margin-bottom: 12px;
-  color: var(--rojo);
+  color: var(--orange);
 }
  
 .courses__subtitle {
@@ -386,7 +436,7 @@ rses snippet · CSS
  
 .courses__more {
   display: inline-block;
-  color: var(--rojo);
+  color: var(--orange);
   font-weight: 600;
   margin-bottom: 40px;
 }
@@ -539,19 +589,29 @@ rses snippet · CSS
     grid-template-columns: 1fr;
   }
 }
+
 /* ============================================================
    ANTES Y DESPUÉS
    ============================================================ */
 .before-after {
-  background: var(--gray-bg);
+  background-image: var(--bg-desktop);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .before-after {
+    background-image: url('assets/destop-41.jpg');
+  }
 }
 
 .before-after h2 {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 900;
   margin-bottom: 12px;
-   color: var(--rojo);
+  color: var(--white);
 }
 
 .before-after > .container > p {
@@ -674,26 +734,8 @@ rses snippet · CSS
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .ba-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "card1 card2"
-      "card3 card3"
-      "card4 card4";
-  }
-
-  .ba-item--3 {
-    height: 300px;
-  }
-
-  .ba-item--4 {
-    height: 220px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ba-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     grid-template-areas:
       "card1"
       "card2"
@@ -701,15 +743,20 @@ rses snippet · CSS
       "card4";
   }
 
-  .ba-item--3 {
+  .ba-item {
     height: 280px;
   }
 }
+
+
 /* ============================================================
    TESTIMONIOS
    ============================================================ */
 .testimonials {
   padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .testimonials h2 {
@@ -858,72 +905,95 @@ rses snippet · CSS
    PRÓXIMAMENTE
    ============================================================ */
 .coming-soon {
-  /* 👇 MODIFICADO: Quitamos la URL fija pero dejamos la estructura del fondo */
-  background-position: left center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 80px 0;
+  overflow: hidden;
 }
 
-.coming-soon__grid {
+.coming-soon__split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+  min-height: 500px;
 }
 
-.coming-soon__eyebrow {
-  font-size: clamp(40px, 6vw, 72px);
-  font-weight: 900;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 4px;
+/* Mitad izquierda: fondo liso + texto centrado */
+.coming-soon__text-panel {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.coming-soon__text {
+  max-width: 440px;
 }
 
 .coming-soon__sub {
   font-size: 14px;
-  color: #1A1A1A;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .coming-soon__text h2 {
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 900;
-  color: var(--rojo);
+  color: var(--orange);
   margin-bottom: 16px;
 }
 
 .coming-soon__text p {
-  color: #1A1A1A;
+  color: #ffffff;
   margin-bottom: 24px;
 }
 
 .coming-soon__text a {
-  color: var(--black);
+  color: var(--orange);
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* 👇 MODIFICADO: Limpiamos el background antiguo y agregamos overflow */
-.coming-soon__img {
-  height: 360px;
-  border-radius: var(--radius);
-  overflow: hidden; /* Para que la imagen respete las esquinas redondeadas */
+/* Mitad derecha: carrusel infinito, contenido a esa mitad */
+.coming-soon__carousel-panel {
+  position: relative;
+  overflow: hidden;
 }
 
-/* 👇 NUEVO: Estilos obligatorios para que la foto HTML se comporte como "cover" */
-.coming-soon__img img {
-  width: 100%;
+.coming-soon__track {
+  display: flex;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  width: max-content;
+  animation: coming-soon-scroll 40s linear infinite;
+}
+
+.coming-soon__slide {
+  flex-shrink: 0;
+  width: 420px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 8px;
+}
+
+/* Como el set de fotos está duplicado, mover -50% da un loop perfecto sin salto */
+@keyframes coming-soon-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .coming-soon__split {
+    grid-template-columns: 1fr;
+  }
+
+  .coming-soon__carousel-panel {
+    height: 320px;
+  }
 }
 
 /* ============================================================
    FAQ
    ============================================================ */
 .faq {
-  background: var(--gray-bg);
+  background: var(--white);
   padding: 80px 0;
 }
 
@@ -997,6 +1067,9 @@ rses snippet · CSS
    ============================================================ */
 .contact {
   padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contact__grid {
@@ -1011,7 +1084,7 @@ rses snippet · CSS
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 16px;
-  color: var(--rojo);
+  color: var(--white);
 }
 
 .contact__text p {
@@ -1039,14 +1112,14 @@ rses snippet · CSS
 
 .contact__form input:focus,
 .contact__form textarea:focus {
-  border-color: var(--orange);
+  border-color: var(--white);
 }
 
 .contact__form textarea { resize: vertical; }
 
 .contact__form-msg {
   font-size: 13px;
-  color: var(--orange);
+  color: var(--white);
   font-weight: 600;
   min-height: 20px;
 }
@@ -1054,7 +1127,7 @@ rses snippet · CSS
    FOOTER
    ============================================================ */
 .footer {
-  background: url(assets/grande\ fondos\ destop-09.jpg) top center/cover no-repeat;
+  background: url(assets/fondos39destop-39.jpg) top center/cover no-repeat;
   color: var(--white);
   padding: 60px 0 0;
 }
@@ -1152,7 +1225,7 @@ rses snippet · CSS
   .about__image     { height: 220px; }
   .about__cards     { grid-template-columns: 1fr; }
   .courses__grid    { grid-template-columns: 1fr 1fr; }
-  .ba-grid          { grid-template-columns: 1fr 1fr; }
+  .ba-grid          { grid-template-columns: 1fr; }
   .testimonials__grid { grid-template-columns: 1fr; }
   .coming-soon__grid  { grid-template-columns: 1fr; }
   .coming-soon__img   { height: 220px; }
@@ -1168,7 +1241,8 @@ rses snippet · CSS
 
   .stats__grid       { grid-template-columns: 1fr; gap: 28px; }
   .courses__grid     { grid-template-columns: 1fr; }
-  .ba-grid           { grid-template-columns: 1fr 1fr; }
+  .ba-grid           { grid-template-columns: 1fr; }
+.ba-item           { height: 340px; }
   .footer__grid      { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom    { flex-direction: column; }
 
